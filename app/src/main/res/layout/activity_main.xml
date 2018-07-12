@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!--app:layout_constraintCircle="@id/btn2"-->
+    <!--app:layout_constraintCircleAngle="135"-->
+    <!--app:layout_constraintCircleRadius="100dp"-->
+
+
+
+
+    <TextView
+        android:id="@+id/account_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:text="账号"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/psw_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密码"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="@id/account_tv"
+        app:layout_constraintTop_toBottomOf="@id/account_tv"
+        android:layout_marginTop="30dp"
+        />
+
+
+    <EditText
+        android:id="@+id/account_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintStart_toEndOf="@id/account_tv"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/account_tv"
+        />
+
+    <EditText
+        android:id="@+id/psw_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/account_edt"
+        app:layout_constraintBottom_toBottomOf="@id/psw_tv"
+        />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        app:layout_constraintEnd_toStartOf="@id/gl1"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="64dp"
+        />
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        app:layout_constraintStart_toEndOf="@id/gl1"
+        app:layout_constraintBottom_toBottomOf="@+id/login_btn"
+        />
+
+
+
+    <Button
+        android:id="@+id/btn_a"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:text="A"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/btn_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fc"
+        android:layout_marginLeft="130dp"
+        app:layout_constraintStart_toEndOf="@id/btn_a"
+
+        />
+    <!--app:layout_goneMarginLeft="130dp"-->
+    <!--android:layout_marginLeft="90dp"-->
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constrainedWidth="true" 强制约束，避免内容覆盖约束-->
+        <!--android:text="fafassfasfassfasdfasfsafasfasfafsafafasfsafafafafafasfasffafdfasfasfasfasfasfdasfasfasfasfafaffaffB"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintEnd_toStartOf="@id/gl1"-->
+        <!--/>-->
+
+
+
+    <TextView
+        android:id="@+id/test_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HB"
+        android:visibility="gone"
+        />
+
+    <android.support.constraint.Placeholder
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:content="@+id/test_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

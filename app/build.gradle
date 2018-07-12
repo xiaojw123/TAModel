@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.xiaojw.tamodel"
+        minSdkVersion 15
+        targetSdkVersion 27
+        buildToolsVersion "27.0.3"
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+task a {
+
+}
+
+task testBoth {
+    // 依赖 a task 先执行
+    dependsOn("a")
+    println '我会在 Configuration 和 Execution 阶段都会执行'
+    doFirst {
+        println '我仅会在 testBoth 的 Execution 阶段执行'
+    }
+    doLast {
+        println '我仅会在 testBoth 的 Execution 阶段执行'
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1234_43608_sharewithdownload_withoutGame_obfs_20180510_111111.jar')
+    implementation project(':baseframe')
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.22.5'
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'org.greenrobot:greendao-generator:3.2.2'
+}
+
+greendao {
+    schemaVersion 1  //版本
+    daoPackage 'com.example.xiaojw.tamodel.greenDb' // 一般为app包名+生成文件的文件夹名
+    targetGenDir 'src/main/java' //生成文件路径
+}
