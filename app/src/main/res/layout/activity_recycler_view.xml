@@ -12,10 +12,9 @@
         android:id="@+id/test_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="50px"
         android:background="@android:color/darker_gray"
-        android:layout_marginTop="60px"
         />
+
 
 
 </android.support.constraint.ConstraintLayout>
