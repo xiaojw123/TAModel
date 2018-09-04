@@ -16,15 +16,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".activity.GreenDaoActiviy">
-        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".activity.GreenDaoActiviy" />
         <activity android:name=".activity.RecyclerViewActivity">
+
+        </activity>
+        <activity android:name=".activity.BaseActivity" />
+        <activity android:name=".activity.NestedActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

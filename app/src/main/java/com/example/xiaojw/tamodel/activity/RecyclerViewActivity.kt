@@ -16,7 +16,7 @@ import com.example.xiaojw.tamodel.APPLog
 import com.example.xiaojw.tamodel.R
 import kotlin.math.log
 
-class RecyclerViewActivity : AppCompatActivity() {
+class RecyclerViewActivity : BaseActivity() {
 
     lateinit var mRecyclerView: RecyclerView
 
@@ -40,6 +40,12 @@ class RecyclerViewActivity : AppCompatActivity() {
         }
         mRecyclerView.adapter = DataAdapter(getDataList());
 
+        val items= listOf("苹果","菠萝","木瓜")
+        for (i in 0 until  items.size){
+
+
+
+        }
 
     }
 
