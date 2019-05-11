@@ -5,8 +5,7 @@ Module_baseframe
 
 Module_app
 
-GreenDaoActiviy:greenDao数据库框架测试
-RecyclerViewActivity:时间轴线RecyclerView</br>
+GreenDaoActiviy:greenDao数据库框架测试  RecyclerViewActivity:时间轴线RecyclerView</br>
  ![Image text](screenshot/screen.png)
 
 
